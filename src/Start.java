@@ -65,19 +65,19 @@ public class Start {
 		}
 			catch(java.lang.StringIndexOutOfBoundsException e){
 			System.out.println("Deine Eingabe war nicht korrekt.");
-		}
+			}
 	}
 
-	private static boolean containsString( String s, String subString ) {
+	private static boolean containsString(String s, String subString) {
         return s.indexOf( subString ) > -1 ? true : false;
     }
 
 	private static void debug(String[] args){
 		System.out.println("Manipuliere Daten...");
 		os = "Windows 10";
-		arch = "64 Bit";
+		arch = "amd64";
 		osversion = "10.0";
 		System.out.println("You actualy running " + os + " (" + arch + ") Version " + osversion);
-}
+	}
 
 }
