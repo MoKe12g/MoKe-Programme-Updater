@@ -1,7 +1,6 @@
 
 public class FunWriter {
 	
-	public static void startFunWriter() {
-		
+	public static void startFunWriter(String[] args) {
 	}
 }
