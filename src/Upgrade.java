@@ -16,7 +16,7 @@ public class Upgrade {
 	public static void startUpgradeCheck() throws IOException {
 	System.out.println("Suche nach neuerer Version...");
 	try {
-		saveUrl("cache","https://sites.google.com/view/moke12g/programme/moke-programme-software-updater");
+		saveUrl("cache","http://moke12g.de/programme/MoKe-Programme-Updater/index.html");
 	} catch (MalformedURLException e) {
 
 		e.printStackTrace();
@@ -30,36 +30,24 @@ public class Upgrade {
 	FileReader fr = new FileReader("cache");
     BufferedReader br = new BufferedReader(fr);
 
-    String website = br.readLine();
-    br.close();
+    String version = br.readLine();
+    String downloadURL = br.readLine();
     File file = new File("cache");
     if(file.exists()) file.delete();
-    if(containsString(website, Start.Programmversion) == false) {
+    if(containsString(Start.Programmversion, version) != true) {
     	System.out.println("Es gibt eine neuere Version ihres Programmes.");
     	int result = JOptionPane.showConfirmDialog(null, "Es ist eine neuere Version deines Programmes verfügbar, willst du sie downloaden?", "Update herunterladen?", JOptionPane.YES_NO_OPTION);
     	if (result == JOptionPane.YES_OPTION) {
     		System.out.println("Benutzer Updatet das Programm");
-    		//Webseite zum Downloaden öffnen
-    		URL url = null;
-            try {
-                url = new URL("https://sites.google.com/view/moke12g/programme/moke-programme-software-updater");
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
+    		saveUrl("MoKe-Programme-Updater" + Start.Programmversion, downloadURL);
+    		//Hier was einbauen um die neue Jar zu öffnen
+    		System.exit(0);
             }
-            if(Desktop.isDesktopSupported()){
-                try {
-                    Desktop.getDesktop().browse(url.toURI());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                }
-            }
-    	} else if (result == JOptionPane.NO_OPTION) {
+    	else if (result == JOptionPane.NO_OPTION) {
     		System.out.println("Benutzer will das Update jetzt nicht herunterladen.");
     	} 
     }
-if(containsString(website, Start.Programmversion) == true) {
+if(containsString(Start.Programmversion, version) == true) {
     	System.out.println("Ihr Programm ist aktuell.");
     }
 	}
