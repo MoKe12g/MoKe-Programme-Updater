@@ -37,8 +37,8 @@ public class Upgrade {
     	int result = JOptionPane.showConfirmDialog(null, "Es ist eine neuere Version deines Programmes verfügbar, willst du sie downloaden?", "Update herunterladen?", JOptionPane.YES_NO_OPTION);
     	if (result == JOptionPane.YES_OPTION) {
     		System.out.println("Benutzer Updatet das Programm");
-    		saveUrl("MoKe-Programme-Updater" + Start.Programmversion, downloadURL);
-    		JOptionPane.showMessageDialog(null, "Bitte starten Sie um das Update zu installieren " + "MoKe-Programme-Updater" + Start.Programmversion, "Test Titel", JOptionPane.OK_OPTION);
+    		saveUrl("MoKe-Programme-Updater" + version + ".jar", downloadURL);
+    		JOptionPane.showMessageDialog(null, "Bitte starten Sie um das Update zu installieren " + "MoKe-Programme-Updater" + version, "Test Titel", JOptionPane.OK_OPTION);
     		System.exit(0);
             }
     	else if (result == JOptionPane.NO_OPTION) {
