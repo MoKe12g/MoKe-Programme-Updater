@@ -34,6 +34,7 @@ public class Upgrade {
     if(file.exists()) file.delete();
     if(Start.containsString(Start.Programmversion, version) != true) {
     	System.out.println("Es gibt eine neuere Version ihres Programmes.");
+    	try {
     	int result = JOptionPane.showConfirmDialog(null, "Es ist eine neuere Version deines Programmes verfügbar, willst du sie downloaden?", "Update herunterladen?", JOptionPane.YES_NO_OPTION);
     	if (result == JOptionPane.YES_OPTION) {
     		System.out.println("Benutzer Updatet das Programm");
@@ -43,7 +44,14 @@ public class Upgrade {
             }
     	else if (result == JOptionPane.NO_OPTION) {
     		System.out.println("Benutzer will das Update jetzt nicht herunterladen.");
-    	} 
+    	}
+    	}
+    	catch(Exception e){
+    		System.out.println("Benutzer Updatet das Programm");
+    		saveUrl("MoKe-Programme-Updater" + version + ".jar", downloadURL);
+    		System.out.println("Bitte nun \"" + Start.Pfad + "java -jar " + "MoKe-Programme-Updater" + version + ".jar\" ausführen, um das Update abzuschließen.");
+    		System.exit(0);
+    	}
     }
 if(Start.containsString(Start.Programmversion, version) == true) {
     	System.out.println("Ihr Programm ist aktuell.");

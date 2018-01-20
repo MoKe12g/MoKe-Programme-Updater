@@ -17,7 +17,8 @@ public class Start {
 		os = System.getProperty("os.name");
 		arch = System.getProperty("os.arch");
 		osversion = System.getProperty("os.version");
-		System.out.println("You running " + os + " (" + arch + ") Version " + osversion);
+		if(containsString(os, "Linux") == true) System.out.println("You running " + os + " (" + arch + ") Kernelversion " + osversion);
+		if(containsString(os, "Linux") == false) System.out.println("You running " + os + " (" + arch + ") Version " + osversion);
 		Pfad = Pfad + "\\MoKe-Programme-Updater\\";
 		File dir = new File(Pfad);
 		dir.mkdir();
