@@ -11,7 +11,7 @@ public class YouTube_dl_GUI {
 		String productName = "YouTube_dl_GUI";
 		String extension = "exe";
 		try {
-			Upgrade.saveUrl(Start.Pfad + "cache","http://moke12g.de/programme/YouTube_dl_GUI/index.html");
+			Tools.saveUrl(Start.Pfad + "cache","http://moke12g.de/programme/YouTube_dl_GUI/index.html");
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -26,7 +26,7 @@ public class YouTube_dl_GUI {
 	    String downloadURL = br.readLine();
 	    File file = new File(Start.Pfad + "cache");
 	    if(file.exists()) file.delete();
-	    Upgrade.saveUrl(Start.Pfad + productName + version + "." + extension, downloadURL);
+	    Tools.saveUrl(Start.Pfad + productName + version + "." + extension, downloadURL);
 	    if(extension == "jar") Runtime.getRuntime().exec(Start.Pfad + "java -jar " + productName + version + "." + extension);
 	    if(extension == "exe") Runtime.getRuntime().exec(Start.Pfad + productName + version + "." + extension);
 	    System.exit(0);

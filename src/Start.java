@@ -17,38 +17,46 @@ public class Start {
 		os = System.getProperty("os.name");
 		arch = System.getProperty("os.arch");
 		osversion = System.getProperty("os.version");
-		if(containsString(os, "Linux") == true) System.out.println("You running " + os + " (" + arch + ") Kernelversion " + osversion);
-		if(containsString(os, "Linux") == false) System.out.println("You running " + os + " (" + arch + ") Version " + osversion);
+		if(Tools.containsString(os, "Linux") == true) System.out.println("You running " + os + " (" + arch + ") Kernelversion " + osversion);
+		if(Tools.containsString(os, "Linux") == false) System.out.println("You running " + os + " (" + arch + ") Version " + osversion);
 		Pfad = Pfad + "\\MoKe-Programme-Updater\\";
 		File dir = new File(Pfad);
 		dir.mkdir();
 		String eingabe = null;
 		try{
-		if(containsString( args[0], "debug" ) == true) debug(args);
-		if(containsString( args[0], "choose" ) == true) eingabe = args[1];
+		if(Tools.containsString( args[0], "debug" ) == true) debug(args);
+		if(Tools.containsString( args[0], "choose" ) == true) eingabe = args[1];
 		}
 		catch(Exception i){}
 		System.out.println();
 		Upgrade.startUpgradeCheck();
+		System.out.println();
+		try {
+			JForm1 show = new JForm1(args);
+			show.show();
+		}
+		catch(Exception e){
+			
+		}
 		System.out.println();
 		System.out.println("Zum Starten eines Programms den ersten Buchstaben eintippen und Enter druecken.");
 		System.out.println("Was moechten sie starten?");
 		System.out.println("-----------------------\\|/ Buchstabe");
 
 		//Now Check System
-		if(containsString( os, "Windows" ) == true && containsString( os, "2000" ) == false && containsString( os, "9" ) == false ){
+		if(Tools.containsString( os, "Windows" ) == true && Tools.containsString( os, "2000" ) == false && Tools.containsString( os, "9" ) == false ){
 			System.out.println("FunWriter \t\tF");
 		}
 		
-		if(containsString( os, "Windows" ) == true && containsString( os, "2000" ) == false && containsString( os, "9" ) == false && containsString( arch, "64" ) == true ){
+		if(Tools.containsString( os, "Windows" ) == true && Tools.containsString( os, "2000" ) == false && Tools.containsString( os, "9" ) == false && Tools.containsString( arch, "64" ) == true ){
 			System.out.println("DataSafe\t\tD");
 		}
 		
-		if(containsString( os, "Windows" ) == true && containsString( os, "2000" ) == false && containsString( os, "9" ) == false ){
+		if(Tools.containsString( os, "Windows" ) == true && Tools.containsString( os, "2000" ) == false && Tools.containsString( os, "9" ) == false ){
 			System.out.println("YouTube-dl GUI \t\tY");
 		}
 		
-		if(containsString( os, "Windows" ) == true && containsString( os, "2000" ) == false && containsString( os, "9" ) == false ){
+		if(Tools.containsString( os, "Windows" ) == true && Tools.containsString( os, "2000" ) == false && Tools.containsString( os, "9" ) == false ){
 			System.out.println("MC Server Creator \tM");
 		}
 		System.out.println("Taschenrechner\t\tT");
@@ -67,17 +75,13 @@ public class Start {
 			if(eingabe.charAt(0) == 'M' || eingabe.charAt(0) == 'm') MC_Server_Creator.startMC_Server_Creator();
 			if(eingabe.charAt(0) == 'T' || eingabe.charAt(0) == 't') Taschenrechner.startTaschenrechner();
 
-			if(containsString( eingabe, "hi" )) System.out.println("HI!!!! Lust auf Minecraft? ");
+			if(Tools.containsString( eingabe, "hi" )) System.out.println("HI!!!! Lust auf Minecraft? ");
 			if(selected == false) System.out.println("Leider wird bei diesem Buchstaben kein Programm gestartet. ");
 		}
 			catch(java.lang.StringIndexOutOfBoundsException e){
 			System.out.println("Deine Eingabe war nicht korrekt.");
 			}
 	}
-
-	static boolean containsString(String s, String subString) {
-        return s.indexOf( subString ) > -1 ? true : false;
-    }
 
 	private static void debug(String[] args){
 		System.out.println("Manipuliere Daten...");
