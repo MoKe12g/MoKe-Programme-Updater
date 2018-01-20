@@ -21,8 +21,10 @@ public class Start {
 		Pfad = Pfad + "\\MoKe-Programme-Updater\\";
 		File dir = new File(Pfad);
 		dir.mkdir();
+		String eingabe = null;
 		try{
 		if(containsString( args[0], "debug" ) == true) debug(args);
+		if(containsString( args[0], "choose" ) == true) eingabe = args[1];
 		}
 		catch(Exception i){}
 		System.out.println();
@@ -54,9 +56,8 @@ public class Start {
 		System.out.println("-----------------------/|\\ Buchstabe");
 		System.out.println("Bitte waehlen sie nun ein Programm.");
 		System.out.print("Meine Wahl faellt auf: ");
-		String eingabe = "";
 		BufferedReader in  = new  BufferedReader (new  InputStreamReader ( System . in ));
-		eingabe = in.readLine();
+		if(eingabe == null) eingabe = in.readLine();
 		
 		try{
 			if(eingabe.charAt(0) == 'F' || eingabe.charAt(0) == 'f') FunWriter.startFunWriter(args);
