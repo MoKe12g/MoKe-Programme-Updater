@@ -1,9 +1,11 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Start {
 	
+	static String Pfad = System.getProperty("user.home");
 	static String Programmversion = "0.1a";
 	static String os = "noscan";
 	static String arch = "noscan";
@@ -16,6 +18,9 @@ public class Start {
 		arch = System.getProperty("os.arch");
 		osversion = System.getProperty("os.version");
 		System.out.println("You running " + os + " (" + arch + ") Version " + osversion);
+		Pfad = Pfad + "\\MoKe-Programme-Updater\\";
+		File dir = new File(Pfad);
+		dir.mkdir();
 		try{
 		if(containsString( args[0], "debug" ) == true) debug(args);
 		}
@@ -68,7 +73,7 @@ public class Start {
 			}
 	}
 
-	private static boolean containsString(String s, String subString) {
+	static boolean containsString(String s, String subString) {
         return s.indexOf( subString ) > -1 ? true : false;
     }
 
