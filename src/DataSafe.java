@@ -8,7 +8,6 @@ public class DataSafe {
 	
 	public static void startDataSafe() throws IOException {
 		Start.selected = true;
-		Start.selected = true;
 		String productName = "DataSafe";
 		String extension = "exe";
 		try {
