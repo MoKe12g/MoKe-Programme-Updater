@@ -69,11 +69,11 @@ public class Start {
 		if(eingabe == null) eingabe = in.readLine();
 		
 		try{
-			if(eingabe.charAt(0) == 'F' || eingabe.charAt(0) == 'f') FunWriter.startFunWriter(args);
-			if(eingabe.charAt(0) == 'D' || eingabe.charAt(0) == 'd') DataSafe.startDataSafe();
-			if(eingabe.charAt(0) == 'Y' || eingabe.charAt(0) == 'y') YouTube_dl_GUI.startYouTube_dl_GUI();
-			if(eingabe.charAt(0) == 'M' || eingabe.charAt(0) == 'm') MC_Server_Creator.startMC_Server_Creator();
-			if(eingabe.charAt(0) == 'T' || eingabe.charAt(0) == 't') Taschenrechner.startTaschenrechner();
+			if(eingabe.charAt(0) == 'F' || eingabe.charAt(0) == 'f') Tools.startandUpdateProgramm("FunWriter", "exe", "http://moke12g.de/programme/FunWriter/index.html");
+			if(eingabe.charAt(0) == 'D' || eingabe.charAt(0) == 'd') Tools.startandUpdateProgramm("DataSafe", "exe", "http://moke12g.de/programme/DataSafe/index.html");
+			if(eingabe.charAt(0) == 'Y' || eingabe.charAt(0) == 'y') Tools.startandUpdateProgramm("YouTube_dl_GUI", "exe", "http://moke12g.de/programme/YouTube_dl_GUI/index.html");
+			if(eingabe.charAt(0) == 'M' || eingabe.charAt(0) == 'm') Tools.startandUpdateProgramm("MCEasy", "exe", "http://moke12g.de/programme/MC_Server_Creator/index.html");
+			if(eingabe.charAt(0) == 'T' || eingabe.charAt(0) == 't') Tools.startandUpdateProgramm("JTaschenrechner", "jar", "http://moke12g.de/programme/Taschenrechner/index.html");
 
 			if(Tools.containsString( eingabe, "hi" )) System.out.println("HI!!!! Lust auf Minecraft? ");
 			if(selected == false) System.out.println("Leider wird bei diesem Buchstaben kein Programm gestartet. ");
