@@ -2,12 +2,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
-import javax.swing.JPanel;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 public class Start {
 	
@@ -15,7 +11,7 @@ public class Start {
 	static JButton startFunWriter = new JButton();
 	
 	static String Pfad = System.getProperty("user.home");
-	static String Programmversion = "0.2f";
+	static String Programmversion = "0.3a";
 	static String os = "noscan";
 	static String arch = "noscan";
 	static String osversion = "noscan";
