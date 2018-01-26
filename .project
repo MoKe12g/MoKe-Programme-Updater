@@ -3,6 +3,7 @@
 	<name>MoKe-Programme-Updater</name>
 	<comment></comment>
 	<projects>
+		<project>MoKe Core</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

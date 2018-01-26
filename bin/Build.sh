@@ -1,0 +1,6 @@
+clear
+echo Build...
+javac Start.java
+echo Start...
+java Start
+echo Beendet
