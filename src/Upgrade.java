@@ -45,7 +45,7 @@ public class Upgrade {
     	catch(Exception e){
     		Console.Write("Benutzer Updatet das Programm", true, true);
     		Website.saveUrl("MoKe-Programme-Updater" + version + ".jar", downloadURL);
-    		Console.Write("Bitte nun \"" + Start.Pfad + "java -jar " + "MoKe-Programme-Updater" + version + ".jar\" ausführen, um das Update abzuschließen.", true, true);
+    		Console.Write("Bitte nun \"java -jar " + "MoKe-Programme-Updater" + version + ".jar\" ausführen, um das Update abzuschließen.", true, true);
     		System.exit(0);
     	}
     }
