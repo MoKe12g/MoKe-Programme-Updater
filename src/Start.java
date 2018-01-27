@@ -45,7 +45,7 @@ public class Start {
 		}
 		Console.Write("Zum Starten eines Programms den ersten Buchstaben eintippen und Enter druecken.", true, true);
 		Console.Write("Was moechten Sie starten?", true, true);
-		Console.Write("-----------------------\\|/ Buchstabe",true, false);
+		Console.Write("-----------------------\\|/ Buchstabe", true, false);
 
 		//Now Check System
 		if(Text.containsString( os, "Windows" ) == true && Text.containsString( os, "2000" ) == false && Text.containsString( os, "9" ) == false ){
@@ -80,7 +80,7 @@ public class Start {
 			if(eingabe.charAt(0) == 'M' || eingabe.charAt(0) == 'm') Tools.startandUpdateProgramm("MCEasy", "exe", "http://moke12g.de/programme/MC_Server_Creator/index.html");
 			if(eingabe.charAt(0) == 'T' || eingabe.charAt(0) == 't') Tools.startandUpdateProgramm("JTaschenrechner", "jar", "http://moke12g.de/programme/Taschenrechner/index.html");
 
-			if(Text.containsString( eingabe, "hi" )) Console.Write("HI!!!! Lust auf Minecraft? ", true, true);
+			if(Text.containsString(eingabe, "hi" )) Console.Write("HI!!!! Lust auf Minecraft? ", true, true);
 			if(selected == false) Console.Write("Leider wird bei diesem Buchstaben kein Programm gestartet. ", true, true);
 		}
 			catch(java.lang.StringIndexOutOfBoundsException e){

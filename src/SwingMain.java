@@ -4,11 +4,13 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class SwingMain extends javax.swing.JFrame {
 	private static final long serialVersionUID = 2031355551531380425L;
 	public static final String ButtonLauscher = null;
+	public static JLabel label1 = new JLabel();
 	public static JButton startFunWriter = new JButton();
 	public static JButton startYouTube_dl_GUI = new JButton();
 	public static JButton startMCEasy = new JButton();
@@ -19,6 +21,8 @@ public class SwingMain extends javax.swing.JFrame {
 		setTitle("MoKe-Programme-Updater " + Start.Programmversion);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JPanel panel = new JPanel();
+		
+		label1.setText("Bitte wähle ein Programm:\n");
 		
 		startFunWriter.setText("FunWriter");
 		this.add(startFunWriter);
@@ -34,7 +38,8 @@ public class SwingMain extends javax.swing.JFrame {
 		
 		startDataSafe.setText("DataSafe");
 		this.add(startDataSafe);
-
+		
+		panel.add(label1);
 		//Now Check System
 		if(Text.containsString( Start.os, "Windows" ) == true && Text.containsString( Start.os, "2000" ) == false && Text.containsString( Start.os, "9" ) == false ){
 			panel.add(startFunWriter);
@@ -70,6 +75,7 @@ public class SwingMain extends javax.swing.JFrame {
 	private void initListeners() {
 		startFunWriter.addActionListener(new ActionListener() {
 			
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
 					Tools.startandUpdateProgramm("FunWriter", "exe", "http://moke12g.de/programme/FunWriter/index.html");
@@ -82,6 +88,7 @@ public class SwingMain extends javax.swing.JFrame {
 		
 		startDataSafe.addActionListener(new ActionListener() {
 			
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
 					Tools.startandUpdateProgramm("DataSafe", "exe", "http://moke12g.de/programme/DataSafe/index.html");
@@ -94,6 +101,7 @@ public class SwingMain extends javax.swing.JFrame {
 		
 		startYouTube_dl_GUI.addActionListener(new ActionListener() {
 			
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
 					Tools.startandUpdateProgramm("YouTube_dl_GUI", "exe", "http://moke12g.de/programme/YouTube_dl_GUI/index.html");
@@ -106,6 +114,7 @@ public class SwingMain extends javax.swing.JFrame {
 		
 		startMCEasy.addActionListener(new ActionListener() {
 			
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
 					Tools.startandUpdateProgramm("MCEasy", "exe", "http://moke12g.de/programme/MC_Server_Creator/index.html");
@@ -118,6 +127,7 @@ public class SwingMain extends javax.swing.JFrame {
 		
 		startJTaschenrechner.addActionListener(new ActionListener() {
 			
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
 					Tools.startandUpdateProgramm("JTaschenrechner", "jar", "http://moke12g.de/programme/Taschenrechner/index.html");
