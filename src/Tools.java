@@ -18,10 +18,11 @@ public class Tools {
 		}
 		FileReader fr = new FileReader(Start.Pfad + "cache");
 	    BufferedReader br = new BufferedReader(fr);
-
+	    
 	    String version = br.readLine();
 	    String downloadURL = br.readLine();
 	    File file = new File(Start.Pfad + "cache");
+	    br.close();
 	    if(file.exists()) file.delete();
 	    Website.saveUrl(Start.Pfad + productName + version + "." + extension, downloadURL);
 	    if(extension == "jar") Runtime.getRuntime().exec(Start.Pfad + "java -jar " + productName + version + "." + extension);

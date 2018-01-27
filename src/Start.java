@@ -2,16 +2,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import javax.swing.JButton;
-import javax.swing.JFrame;
 
 public class Start {
-	
-	static JFrame meinJFrame = new JFrame();
-	static JButton startFunWriter = new JButton();
-	
 	static String Pfad = System.getProperty("user.home");
-	static String Programmversion = "0.3a";
+	static String Programmversion = "0.3b";
 	static String os = "noscan";
 	static String arch = "noscan";
 	static String osversion = "noscan";
@@ -80,7 +74,7 @@ public class Start {
 			if(eingabe.charAt(0) == 'M' || eingabe.charAt(0) == 'm') Tools.startandUpdateProgramm("MCEasy", "exe", "http://moke12g.de/programme/MC_Server_Creator/index.html");
 			if(eingabe.charAt(0) == 'T' || eingabe.charAt(0) == 't') Tools.startandUpdateProgramm("JTaschenrechner", "jar", "http://moke12g.de/programme/Taschenrechner/index.html");
 
-			if(Text.containsString(eingabe, "hi" )) Console.Write("HI!!!! Lust auf Minecraft? ", true, true);
+			if(Text.containsString( eingabe, "hi" )) Console.Write("HI!!!! Lust auf Minecraft? ", true, true);
 			if(selected == false) Console.Write("Leider wird bei diesem Buchstaben kein Programm gestartet. ", true, true);
 		}
 			catch(java.lang.StringIndexOutOfBoundsException e){

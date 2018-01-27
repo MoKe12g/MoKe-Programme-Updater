@@ -27,6 +27,7 @@ public class Upgrade {
     String version = br.readLine();
     String downloadURL = br.readLine();
     File file = new File(Start.Pfad + "cache");
+    br.close();
     if(file.exists()) file.delete();
     if(Text.containsString(Start.Programmversion, version) != true) {
     	Console.Write("Es gibt eine neuere Version ihres Programmes.", true, true);

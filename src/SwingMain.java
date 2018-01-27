@@ -22,7 +22,7 @@ public class SwingMain extends javax.swing.JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JPanel panel = new JPanel();
 		
-		label1.setText("Bitte wähle ein Programm:\n");
+		label1.setText("Bitte wähle ein Programm: \n");
 		
 		startFunWriter.setText("FunWriter");
 		this.add(startFunWriter);
@@ -57,7 +57,7 @@ public class SwingMain extends javax.swing.JFrame {
 			panel.add(startMCEasy);
 		}
 		
-		panel.add(startJTaschenrechner); // Runns
+		panel.add(startJTaschenrechner); //Runns
 		
 		
 		this.initListeners();
