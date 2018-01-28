@@ -24,9 +24,13 @@ public class Tools {
 	    File file = new File(Start.Pfad + "cache");
 	    br.close();
 	    if(file.exists()) file.delete();
+	    Console.Write("Die neuste Version von " + productName + " ist " + version, true, true);
+	    Console.Write("Programm wird heruntergeladen...", true, true);
 	    Website.saveUrl(Start.Pfad + productName + version + "." + extension, downloadURL);
+	    Console.Write("Programm wird gestartet...", true, true);
 	    if(extension == "jar") Runtime.getRuntime().exec("java -jar " + Start.Pfad + productName + version + "." + extension);
 	    if(extension == "exe") Runtime.getRuntime().exec(Start.Pfad + productName + version + "." + extension);
+	    Console.Write("Programm ist gestartet.", true, true);
 	    System.exit(0);
 	}
 	

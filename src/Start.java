@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Start {
-	static String Pfad = System.getProperty("user.home");
-	static String Programmversion = "0.3c";
+	static String Pfad = "";
+	static String Programmversion = "0.3e";
 	static String os = "noscan";
 	static String arch = "noscan";
 	static String osversion = "noscan";
@@ -17,9 +17,9 @@ public class Start {
 		os = System.getProperty("os.name");
 		arch = System.getProperty("os.arch");
 		osversion = System.getProperty("os.version");
-		if(Text.containsString(os, "Linux") == true)Console.Write("You running " + os + " (" + arch + ") Kernelversion " + osversion, true, true);
+		if(Text.containsString(os, "Linux") == true) Console.Write("You running " + os + " (" + arch + ") Kernelversion " + osversion, true, true);
 		if(Text.containsString(os, "Linux") == false) Console.Write("You running " + os + " (" + arch + ") Version " + osversion, true, true);
-		Pfad = Pfad + "\\MoKe-Programme-Updater\\";
+		Pfad = FileTools.Pfad("MoKeProgrammeUpdater");
 		File dir = new File(Pfad);
 		dir.mkdir();
 		String eingabe = null;
@@ -63,8 +63,9 @@ public class Start {
 		Console.Write("-----------------------/|\\ Buchstabe",true, false);
 		Console.Write("Bitte waehlen Sie nun ein Programm.", true, true);
 		Console.Write("Meine Wahl faellt auf: ", false, false);
-		BufferedReader in  = new  BufferedReader (new  InputStreamReader ( System . in ));
+		BufferedReader in = new BufferedReader (new InputStreamReader (System.in));
 		if(eingabe == null) eingabe = in.readLine();
+		Console.Write("", true, false);
 		
 		try{
 			

@@ -32,7 +32,7 @@ public class Upgrade {
     if(Text.containsString(Start.Programmversion, version) != true) {
     	Console.Write("Es gibt eine neuere Version ihres Programmes.", true, true);
     	try {
-    	int result = JOptionPane.showConfirmDialog(null, "Es ist eine neuere Version deines Programmes verfügbar, willst du Sie downloaden?", "Update herunterladen?", JOptionPane.YES_NO_OPTION);
+    	int result = JOptionPane.showConfirmDialog(null, "Die Version " + version + " ist erschienen, wollen sie jetzt auf diese Version Updaten?\nIhre Jetzige Version ist die Version " + Start.Programmversion, "Update herunterladen?", JOptionPane.YES_NO_OPTION);
     	if (result == JOptionPane.YES_OPTION) {
     		Console.Write("Benutzer Updatet das Programm", true, true);
     		Website.saveUrl("MoKe-Programme-Updater" + version + ".jar", downloadURL);
@@ -40,11 +40,11 @@ public class Upgrade {
     		System.exit(0);
             }
     	else if (result == JOptionPane.NO_OPTION) {
-    		Console.Write("Benutzer will das Update jetzt nicht herunterladen.", true, true);
+    		Console.Write("Benutzer will das Update jetzt nicht installieren.", true, true);
     	}
     	}
     	catch(Exception e){
-    		Console.Write("Benutzer Updatet das Programm", true, true);
+    		Console.Write("Benutzer Updatet das Programm von Version " + Start.Programmversion + " -> " + version, true, true);
     		Website.saveUrl("MoKe-Programme-Updater" + version + ".jar", downloadURL);
     		Runtime.getRuntime().exec("java -jar " + "MoKe-Programme-Updater" + version + ".jar");
     		System.exit(0);
