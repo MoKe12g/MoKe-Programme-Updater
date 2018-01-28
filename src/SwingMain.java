@@ -80,7 +80,7 @@ public class SwingMain extends javax.swing.JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					Tools.startandUpdateProgramm("FunWriter", "exe", "http://moke12g.de/programme/FunWriter/index.html");
+					Tools.startandUpdateProgramm("FunWriter", "exe", "http://moke12g.de/programme/FunWriter/index.html", true);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -93,7 +93,7 @@ public class SwingMain extends javax.swing.JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					Tools.startandUpdateProgramm("DataSafe", "exe", "http://moke12g.de/programme/DataSafe/index.html");
+					Tools.startandUpdateProgramm("DataSafe", "exe", "http://moke12g.de/programme/DataSafe/index.html", true);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -106,7 +106,7 @@ public class SwingMain extends javax.swing.JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					Tools.startandUpdateProgramm("YouTube_dl_GUI", "exe", "http://moke12g.de/programme/YouTube_dl_GUI/index.html");
+					Tools.startandUpdateProgramm("YouTube_dl_GUI", "exe", "http://moke12g.de/programme/YouTube_dl_GUI/index.html", true);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -119,7 +119,7 @@ public class SwingMain extends javax.swing.JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					Tools.startandUpdateProgramm("MCEasy", "exe", "http://moke12g.de/programme/MC_Server_Creator/index.html");
+					Tools.startandUpdateProgramm("MCEasy", "exe", "http://moke12g.de/programme/MC_Server_Creator/index.html", true);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -132,7 +132,7 @@ public class SwingMain extends javax.swing.JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					Tools.startandUpdateProgramm("JTaschenrechner", "jar", "http://moke12g.de/programme/Taschenrechner/index.html");
+					Tools.startandUpdateProgramm("JTaschenrechner", "jar", "http://moke12g.de/programme/Taschenrechner/index.html", true);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

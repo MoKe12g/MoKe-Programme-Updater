@@ -6,7 +6,7 @@ import java.net.MalformedURLException;
 
 public class Tools {
 	
-	public static void startandUpdateProgramm(String productName, String extension, String URL) throws IOException {
+	public static void startandUpdateProgramm(String productName, String extension, String URL, boolean Exit) throws IOException {
 		try {
 			Website.saveUrl(Start.Pfad + "cache", URL);
 		} catch (MalformedURLException e) {
@@ -31,7 +31,7 @@ public class Tools {
 	    if(extension == "jar") Runtime.getRuntime().exec("java -jar " + Start.Pfad + productName + version + "." + extension);
 	    if(extension == "exe") Runtime.getRuntime().exec(Start.Pfad + productName + version + "." + extension);
 	    Console.Write("Programm ist gestartet.", true, true);
-	    System.exit(0);
+	    if(Exit == true) System.exit(0);
 	}
 	
 }

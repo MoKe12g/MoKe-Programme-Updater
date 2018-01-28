@@ -5,10 +5,11 @@ import java.io.InputStreamReader;
 
 public class Start {
 	static String Pfad = "";
-	static String Programmversion = "0.3e";
+	static String Programmversion = "0.3f";
 	static String os = "noscan";
 	static String arch = "noscan";
 	static String osversion = "noscan";
+	static String eingabe = null;
 	public static Boolean selected = false;
 	
 	public static void main(String[] args) throws IOException {
@@ -22,11 +23,8 @@ public class Start {
 		Pfad = FileTools.Pfad("MoKeProgrammeUpdater");
 		File dir = new File(Pfad);
 		dir.mkdir();
-		String eingabe = null;
 		try{
-			
-		if(Text.containsString( args[0], "debug" ) == true) debug(args);
-		if(Text.containsString( args[0], "choose" ) == true) eingabe = args[1];
+			if(args[0] != "") Arguments.init(args);
 		
 		}
 		catch(Exception i){}
@@ -69,11 +67,11 @@ public class Start {
 		
 		try{
 			
-			if(eingabe.charAt(0) == 'F' || eingabe.charAt(0) == 'f') Tools.startandUpdateProgramm("FunWriter", "exe", "http://moke12g.de/programme/FunWriter/index.html");
-			if(eingabe.charAt(0) == 'D' || eingabe.charAt(0) == 'd') Tools.startandUpdateProgramm("DataSafe", "exe", "http://moke12g.de/programme/DataSafe/index.html");
-			if(eingabe.charAt(0) == 'Y' || eingabe.charAt(0) == 'y') Tools.startandUpdateProgramm("YouTube_dl_GUI", "exe", "http://moke12g.de/programme/YouTube_dl_GUI/index.html");
-			if(eingabe.charAt(0) == 'M' || eingabe.charAt(0) == 'm') Tools.startandUpdateProgramm("MCEasy", "exe", "http://moke12g.de/programme/MC_Server_Creator/index.html");
-			if(eingabe.charAt(0) == 'T' || eingabe.charAt(0) == 't') Tools.startandUpdateProgramm("JTaschenrechner", "jar", "http://moke12g.de/programme/Taschenrechner/index.html");
+			if(eingabe.charAt(0) == 'F' || eingabe.charAt(0) == 'f') Tools.startandUpdateProgramm("FunWriter", "exe", "http://moke12g.de/programme/FunWriter/index.html", true);
+			if(eingabe.charAt(0) == 'D' || eingabe.charAt(0) == 'd') Tools.startandUpdateProgramm("DataSafe", "exe", "http://moke12g.de/programme/DataSafe/index.html", true);
+			if(eingabe.charAt(0) == 'Y' || eingabe.charAt(0) == 'y') Tools.startandUpdateProgramm("YouTube_dl_GUI", "exe", "http://moke12g.de/programme/YouTube_dl_GUI/index.html", true);
+			if(eingabe.charAt(0) == 'M' || eingabe.charAt(0) == 'm') Tools.startandUpdateProgramm("MCEasy", "exe", "http://moke12g.de/programme/MC_Server_Creator/index.html", true);
+			if(eingabe.charAt(0) == 'T' || eingabe.charAt(0) == 't') Tools.startandUpdateProgramm("JTaschenrechner", "jar", "http://moke12g.de/programme/Taschenrechner/index.html", true);
 
 			if(Text.containsString( eingabe, "hi" )) Console.Write("HI!!!! Lust auf Minecraft? ", true, true);
 			if(selected == false) Console.Write("Leider wird bei diesem Buchstaben kein Programm gestartet. ", true, true);
@@ -81,14 +79,6 @@ public class Start {
 			catch(java.lang.StringIndexOutOfBoundsException e){
 				Console.Write("Deine Eingabe war nicht korrekt.", true, true);
 			}
-	}
-
-	private static void debug(String[] args){
-		Console.Write("Manipuliere Daten...", true, true);
-		os = "Windows 10";
-		arch = "amd64";
-		osversion = "10.0";
-		Console.Write("You actualy running " + os + " (" + arch + ") Version " + osversion, true, true);
 	}
 	
 	public static void FunWriter() {
