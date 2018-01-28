@@ -25,7 +25,7 @@ public class Tools {
 	    br.close();
 	    if(file.exists()) file.delete();
 	    Website.saveUrl(Start.Pfad + productName + version + "." + extension, downloadURL);
-	    if(extension == "jar") Runtime.getRuntime().exec(Start.Pfad + "java -jar " + productName + version + "." + extension);
+	    if(extension == "jar") Runtime.getRuntime().exec("java -jar " + Start.Pfad + productName + version + "." + extension);
 	    if(extension == "exe") Runtime.getRuntime().exec(Start.Pfad + productName + version + "." + extension);
 	    System.exit(0);
 	}

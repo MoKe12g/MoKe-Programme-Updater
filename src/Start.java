@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 
 public class Start {
 	static String Pfad = System.getProperty("user.home");
-	static String Programmversion = "0.3b";
+	static String Programmversion = "0.3c";
 	static String os = "noscan";
 	static String arch = "noscan";
 	static String osversion = "noscan";

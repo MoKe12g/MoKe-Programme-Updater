@@ -36,7 +36,7 @@ public class Upgrade {
     	if (result == JOptionPane.YES_OPTION) {
     		Console.Write("Benutzer Updatet das Programm", true, true);
     		Website.saveUrl("MoKe-Programme-Updater" + version + ".jar", downloadURL);
-    		Runtime.getRuntime().exec(Start.Pfad + "java -jar " + "MoKe-Programme-Updater" + version + ".jar");
+    		Runtime.getRuntime().exec("java -jar " + "MoKe-Programme-Updater" + version + ".jar");
     		System.exit(0);
             }
     	else if (result == JOptionPane.NO_OPTION) {
@@ -46,7 +46,7 @@ public class Upgrade {
     	catch(Exception e){
     		Console.Write("Benutzer Updatet das Programm", true, true);
     		Website.saveUrl("MoKe-Programme-Updater" + version + ".jar", downloadURL);
-    		Console.Write("Bitte nun \"java -jar " + "MoKe-Programme-Updater" + version + ".jar\" ausführen, um das Update abzuschließen.", true, true);
+    		Runtime.getRuntime().exec("java -jar " + "MoKe-Programme-Updater" + version + ".jar");
     		System.exit(0);
     	}
     }
