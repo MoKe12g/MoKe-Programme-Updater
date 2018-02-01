@@ -22,7 +22,7 @@ public class SwingMain extends javax.swing.JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JPanel panel = new JPanel();
 		
-		label1.setText("Bitte wähle ein Programm: \n");
+		label1.setText("Bitte wï¿½hle ein Programm: \n");
 		
 		startFunWriter.setText("FunWriter");
 		this.add(startFunWriter);
@@ -69,8 +69,6 @@ public class SwingMain extends javax.swing.JFrame {
 		x = (d.width - width) /2;
 		y = (d.height - height) /2;
 		setBounds(x, y, width, height);
-		this.setMaximumSize(this.getSize());
-		this.setMinimumSize(this.getSize());
 		setVisible(true);
 	}
 	
