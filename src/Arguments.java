@@ -19,7 +19,7 @@ public class Arguments {
 	}
 	
 	public static void help(String[] args) {
-		Console.Write("Mögliche Argumente", true, false);
+		Console.Write("Mï¿½gliche Argumente", true, false);
 		Console.Write("------------------", true, false);
 		Console.Write("Hilfe\t\t--help", true, false);
 		Console.Write("Extract all\t--ea", true, false);
@@ -29,10 +29,10 @@ public class Arguments {
 	}
 	
 	public static void extractall() throws IOException {
-		Tools.startandUpdateProgramm("FunWriter", "exe", "http://moke12g.de/programme/FunWriter/index.html", false);
-		Tools.startandUpdateProgramm("DataSafe", "exe", "http://moke12g.de/programme/DataSafe/index.html", false);
-		Tools.startandUpdateProgramm("YouTube_dl_GUI", "exe", "http://moke12g.de/programme/YouTube_dl_GUI/index.html", false);
-		Tools.startandUpdateProgramm("MCEasy", "exe", "http://moke12g.de/programme/MC_Server_Creator/index.html", false);
-		Tools.startandUpdateProgramm("JTaschenrechner", "jar", "http://moke12g.de/programme/Taschenrechner/index.html", true);
+		Tools.startandUpdateProgramm(1, false);
+		Tools.startandUpdateProgramm(2, false);
+		Tools.startandUpdateProgramm(3, false);
+		Tools.startandUpdateProgramm(4, false);
+		Tools.startandUpdateProgramm(5, false);
 	}
 }

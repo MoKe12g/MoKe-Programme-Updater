@@ -78,7 +78,7 @@ public class SwingMain extends javax.swing.JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					Tools.startandUpdateProgramm("FunWriter", "exe", "http://moke12g.de/programme/FunWriter/index.html", true);
+					Tools.startandUpdateProgramm(0, true);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -91,7 +91,7 @@ public class SwingMain extends javax.swing.JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					Tools.startandUpdateProgramm("DataSafe", "exe", "http://moke12g.de/programme/DataSafe/index.html", true);
+					Tools.startandUpdateProgramm(1, true);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -104,7 +104,7 @@ public class SwingMain extends javax.swing.JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					Tools.startandUpdateProgramm("YouTube_dl_GUI", "exe", "http://moke12g.de/programme/YouTube_dl_GUI/index.html", true);
+					Tools.startandUpdateProgramm(2, true);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -117,7 +117,7 @@ public class SwingMain extends javax.swing.JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					Tools.startandUpdateProgramm("MCEasy", "exe", "http://moke12g.de/programme/MC_Server_Creator/index.html", true);
+					Tools.startandUpdateProgramm(3, true);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -130,7 +130,7 @@ public class SwingMain extends javax.swing.JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					Tools.startandUpdateProgramm("JTaschenrechner", "jar", "http://moke12g.de/programme/Taschenrechner/index.html", true);
+					Tools.startandUpdateProgramm(4, true);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

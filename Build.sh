@@ -1,6 +1,6 @@
 clear
 echo Build...
-javac Start.java
+javac *.jar src/Start.java
 echo Start...
-java Start
+java src/Start
 echo Beendet
